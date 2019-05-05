@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
+$background: #18121E;
+$text: whitesmoke;
+
+body{
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: $background;
+    color: $text;
+
+    h2{
+        font-weight: 700;
+    }
+
+    p{
+        font-weight: 400;
+    }
+
+    #header{
+        padding: 20px;
+
+        #title{
+            margin: 15px 0;
+            font-size: 3rem;
+            font-weight: 900;
+        }
+
+        #subreddit_form{
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+        }
+        
+        select, input{
+            margin: 0 5px 0 0;
+            padding: 10px 15px;
+            background: darken($background, 2%);
+            color: darken($text, 50%);
+            border: 0;
+            border-radius: 0;
+        }
+    }
+    
+    #post{
+        padding: 20px;
+
+        #title{
+            font-size: 1rem;
+        }
+
+        #text{
+            color: darken($text, 40%);
+            font-size: 0.9rem;
+        }
+        
+        #author{
+            margin: 30px 0 0 0;
+            font-size: 0.8rem;
+            color: darken($text, 50%);
+        }
+        
+        #subreddit{
+            color: darken($text, 50%);
+        }
+        
+        #info{
+            font-size: 0.8rem;
+            color: darken($text, 50%);
+            display: grid;
+            grid-template-columns: repeat(5, 20%);
+            grid-gap: 20px;
+        }
+    }
+
+    #post:nth-of-type(2n){
+        background: darken($background, 2%)
+    }
+}
